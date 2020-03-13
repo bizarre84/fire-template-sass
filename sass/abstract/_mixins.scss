@@ -1,0 +1,6 @@
+@mixin font ($size, $height: $size, $weight: normal, $style: normal) {
+  font-size: $size;
+  @if $size==$height {line-height: $size*1.15;} @else {line-height: $height;}
+  font-weight: $weight;
+  font-style: $style;
+}

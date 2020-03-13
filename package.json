@@ -1,0 +1,23 @@
+{
+  "name": "fire-template-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style" : "sass --watch sass/main.scss styles/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bizarre84/fire-template-sass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bizarre84/fire-template-sass/issues"
+  },
+  "homepage": "https://github.com/bizarre84/fire-template-sass#readme",
+  "devDependencies": {
+    "sass": "^1.26.3"
+  }
+}
