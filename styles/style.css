@@ -544,8 +544,16 @@ body {
   padding: 0.5rem 1rem;
 }
 
-ul {
+#left-menu-container ul {
   list-style-type: none;
+}
+
+#vertical-multilevel-menu {
+  padding: 0;
+}
+
+#vertical-multilevel-menu ul {
+  padding: 0 0 0 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
