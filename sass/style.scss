@@ -1,8 +1,7 @@
 //1 abstract
 @import "abstract/contstans";
-@import "abstract/fonts";
-@import "font-awesome/fontawesome.scss";
-@import "font-awesome/solid.scss";
+/*@import "font-awesome/fontawesome.scss";
+@import "font-awesome/solid.scss";*/
 @import "abstract/mixins";
 @import "abstract/placeholders";
 
@@ -11,6 +10,7 @@
 
 //3 base
 @import "base/base";
+@import "base/fonts";
 @import "base/typography";
 
 //4 layout

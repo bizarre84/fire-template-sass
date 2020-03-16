@@ -37,8 +37,12 @@
   color: $color-white;
 }
 
-.bars {
+.bars a {
   color: $color-white;
+}
+
+.bars a.activ-link {
+  color: $color-additional;
 }
 
 .phone-text, .phone-text-link, .mail-text-link, .header-address, .slogan, .language-text {
