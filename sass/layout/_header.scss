@@ -1,3 +1,46 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+.header {
+  background-color: $color-primary;
+  padding: 0.5rem 0;
+}
+
+.layout-3-column {
+  display: flex;
+  margin: 0 1rem;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 10rem;
+  display: inline-block;
+}
+
+.language a {
+  padding: 1.4rem 0 1.4rem 3.5rem;
+}
+.lang_en {
+  background: url("../img/header/lang_en.png") no-repeat;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.header-main div {
+  padding: 0 0.5rem;
+}
+.phone a {
+  padding: 0 0.5rem;
+  color: $color-white;
+}
+
+.bars {
+  color: $color-white;
+}
+
+.phone-text, .phone-text-link, .mail-text-link, .header-address, .slogan, .language-text {
+  display: none;
+}

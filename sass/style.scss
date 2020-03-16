@@ -1,4 +1,4 @@
-//abstract
+//1 abstract
 @import "abstract/contstans";
 @import "abstract/fonts";
 @import "font-awesome/fontawesome.scss";
@@ -6,5 +6,19 @@
 @import "abstract/mixins";
 @import "abstract/placeholders";
 
-//base
+//vendor
+@import "vendors/normalize";
+
+//3 base
 @import "base/base";
+@import "base/typography";
+
+//4 layout
+@import "layout/wrapper";
+@import "layout/header";
+@import "layout/content";
+
+//5 components
+@import "components/img";
+@import "components/form-search";
+@import "components/menu";

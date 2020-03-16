@@ -1,0 +1,22 @@
+.search {
+  background-color: $color-additional;
+}
+.search form {
+  display: flex;
+  justify-content: space-between;
+}
+.search input[type="text"] {
+  @extend %font-textProBold;
+  @include font($size: 1.1rem, $height: 3rem);
+  background: $color-additional;
+  border: none;
+  margin-left: 1rem;
+  color: $color-white;
+}
+
+.search input[type="submit"] {
+  background: url(../img/header/search.png) no-repeat 50% 50%;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+}
