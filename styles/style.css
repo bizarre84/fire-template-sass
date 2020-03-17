@@ -550,6 +550,44 @@ body {
 
 #vertical-multilevel-menu {
   padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#vertical-multilevel-menu li {
+  position: relative;
+  display: flex;
+  transition: background-color 0.5s ease;
+  text-align: center;
+  flex: 1;
+  flex-direction: column;
+}
+
+#vertical-multilevel-menu a {
+  position: relative;
+  display: inline-flex;
+  padding: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  flex: 1;
+  justify-content: center;
+}
+
+#vertical-multilevel-menu a:hover {
+  color: #404042;
+}
+
+#vertical-multilevel-menu a > .fa {
+  margin-left: 8px;
+}
+
+#vertical-multilevel-menu li:hover {
+  background-color: #ffffff;
+}
+
+#vertical-multilevel-menu li:hover .root-item {
+  display: flex;
 }
 
 #vertical-multilevel-menu ul {

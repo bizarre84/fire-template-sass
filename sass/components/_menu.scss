@@ -8,7 +8,46 @@
 }
 #vertical-multilevel-menu {
   padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
+// first level menu
+
+#vertical-multilevel-menu li {
+  position: relative;
+  display: flex;
+  transition: background-color .5s ease;
+  text-align: center;
+  flex: 1;
+  flex-direction: column;
+}
+
+#vertical-multilevel-menu a {
+  position: relative;
+  display: inline-flex;
+  padding: 20px;
+  text-decoration: none;
+  color: $color-white;
+  flex: 1;
+  justify-content: center;
+}
+#vertical-multilevel-menu a:hover {
+  color: $color-background;
+}
+
+#vertical-multilevel-menu a > .fa {
+  margin-left: 8px;
+}
+
+#vertical-multilevel-menu li:hover {
+  background-color: $color-white;
+}
+
+#vertical-multilevel-menu li:hover .root-item {
+  display: flex;
+}
+
 #vertical-multilevel-menu ul{
   padding: 0 0 0 2rem;
 }
