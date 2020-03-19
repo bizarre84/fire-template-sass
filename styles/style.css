@@ -1,11 +1,19 @@
 /*@import "font-awesome/fontawesome.scss";
 @import "font-awesome/solid.scss";*/
-body {
+.brand a, body {
   font-family: "PFDinTextProRegular", Verdana, sans-serif;
 }
 
 .search input[type=text] {
   font-family: "PFDinDisplayProBold", Verdana, sans-serif;
+}
+
+.main-news a, .note, h1 {
+  font-family: "PFDinDisplayProBlack", Verdana, sans-serif;
+}
+
+.main-news span {
+  font-family: "PFDinDisplayProMedium", Verdana, sans-serif;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -430,6 +438,14 @@ body {
   font-style: normal;
 }
 
+h1 {
+  color: #384071;
+  font-size: 2.2rem;
+  line-height: 2.53rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
 .wrapper {
   max-width: 320px;
   margin: auto;
@@ -497,6 +513,14 @@ body {
   display: none;
 }
 
+.news {
+  display: none;
+}
+
+.summary-production {
+  display: none;
+}
+
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -504,6 +528,34 @@ body {
 
 .content .wrapper {
   padding: 0;
+}
+
+footer {
+  background-color: #404042;
+}
+
+.footer-menu {
+  text-align: center;
+  margin: 1rem;
+}
+
+.footer-menu a {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #b0b0b0;
+  padding: 0 0.5rem;
+}
+
+.footer-menu a:hover {
+  color: #888888;
+}
+
+.footer_address {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .responsive {
@@ -529,6 +581,7 @@ body {
   border: none;
   margin-left: 1rem;
   color: #ffffff;
+  width: 95%;
 }
 
 .search input[type=submit] {
@@ -592,6 +645,179 @@ body {
 
 #vertical-multilevel-menu ul {
   padding: 0 0 0 2rem;
+}
+
+.img-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-menu a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+
+.img-menu a:hover {
+  color: #d9d9d9;
+  border: solid;
+  border-width: 0.1rem;
+  border-color: #d9d9d9;
+}
+
+.fire, .water, .remont {
+  height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fire {
+  background-image: url(../img/img-menu/bl1_bg.png);
+}
+
+.remont {
+  background-image: url(../img/img-menu/bl2_bg.png);
+}
+
+.water {
+  background-image: url(../img/img-menu/bl3_bg.png);
+}
+
+.note {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: normal;
+  font-style: normal;
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.fire .note {
+  background-color: #004a80;
+}
+
+.fire .note:before, .water .note:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 1.2rem solid transparent;
+  border-right: 1.2rem solid transparent;
+  border-top: 1.2rem solid #004a80;
+  position: absolute;
+  bottom: -1.2rem;
+  left: 1.5rem;
+}
+
+.remont .note {
+  background-color: #ff501a;
+}
+
+.remont .note:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 1.2rem solid transparent;
+  border-right: 1.2rem solid transparent;
+  border-top: 1.2rem solid #ff501a;
+  position: absolute;
+  bottom: -1.2rem;
+  right: 1.5rem;
+}
+
+.water .note {
+  background-color: #004a80;
+}
+
+.main-news {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  padding: 1rem;
+}
+
+.main-news .item {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.main-news .item span {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.main-news .item a {
+  flex-basis: 75%;
+}
+
+.main-news a {
+  text-transform: uppercase;
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #404042;
+}
+
+.main-news a:hover {
+  color: #404042ba;
+}
+
+.main-news span {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #004a80;
+}
+
+.all-news {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.all-news a {
+  color: #ff501a;
+}
+
+.all-news a:hover {
+  color: #ff501aba;
+}
+
+.content h1 {
+  text-align: center;
+}
+
+.main-brands {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brand {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand a {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: normal;
+  font-style: normal;
+  padding: 1.5rem;
+}
+
+.brand a:hover {
+  color: #ff501aba;
 }
 
 /*# sourceMappingURL=style.css.map */

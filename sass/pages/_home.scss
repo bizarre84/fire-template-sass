@@ -1,3 +1,142 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// -----------------------------------------------------------------------------
+.img-menu {
+  display: flex;
+  flex-direction: column;
+}
+.img-menu a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: $color-img-menu;
+}
+.img-menu a:hover {
+  color: $color-img-menu-hover;
+  border: solid;
+  border-width: 0.1rem;
+  border-color: $color-img-menu-hover;
+}
+.fire, .water, .remont {
+  height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fire {
+  background-image: url(../img/img-menu/bl1_bg.png);
+}
+
+.remont {
+  background-image: url(../img/img-menu/bl2_bg.png);
+}
+
+.water {
+  background-image: url(../img/img-menu/bl3_bg.png);
+}
+
+.note {
+  @extend %font-diplayProBlack;
+  @include font($size: 1.6rem, $height: 2rem);
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+.fire .note {
+  background-color: $color-primary;
+}
+.fire .note:before, .water .note:before {
+  content: "";
+  display: block;
+  width: 0; 
+  height: 0; 
+  border-left: 1.2rem solid transparent;
+  border-right: 1.2rem solid transparent;
+  border-top: 1.2rem solid $color-primary; 
+  position: absolute;
+  bottom: -1.2rem;
+  left: 1.5rem;
+}
+.remont .note {
+  background-color: $color-additional;
+}
+.remont .note:before {
+  content: "";
+  display: block;
+  width: 0; 
+  height: 0; 
+  border-left: 1.2rem solid transparent;
+  border-right: 1.2rem solid transparent;
+  border-top: 1.2rem solid $color-additional; 
+  position: absolute;
+  bottom: -1.2rem;
+  right: 1.5rem;
+}
+.water .note {
+  background-color: $color-primary;
+}
+
+.main-news {
+  display: flex;
+  flex-direction: column;
+  background-color: $main-news-background;
+  padding: 1rem;
+}
+.main-news .item {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.main-news .item span {
+  flex-basis: 25%;
+  text-align: center;
+}
+.main-news .item a {
+  flex-basis: 75%;
+}
+.main-news a {
+  text-transform: uppercase;
+  text-align: justify;
+  @extend %font-diplayProBlack;
+  @include font($size: 1.2rem, $height: 1.8rem);
+  color: $color-background;
+}
+.main-news a:hover {
+  color: $color-background-hover;
+}
+.main-news span {
+  @extend %font-diplayProMedium;
+  @include font($size: 1.2rem, $height: 1.8rem);
+  color: $color-primary;
+}
+.all-news {
+  text-align: right;
+  margin-top: 1rem;
+}
+.all-news a {
+  color: $color-additional;
+}
+.all-news a:hover {
+  color: $color-additional-hover;
+}
+.content h1 {
+  text-align: center;
+}
+.main-brands {
+  display: flex;
+  flex-wrap: wrap;
+}
+.brand {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.brand a {
+  text-align: center;
+  @extend %font-prim;
+  @include font($size: 1.4rem, $height: 1.7rem);
+  padding: 1.5rem;
+}
+.brand a:hover {
+  color: $color-additional-hover;
+}

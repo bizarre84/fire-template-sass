@@ -5,3 +5,8 @@ body {
   @extend %font-prim;
   @include font($size: 1.6rem);
 }
+h1 {
+  color: $color-h1;
+  @extend %font-diplayProBlack;
+  @include font($size: 2.2rem);
+}

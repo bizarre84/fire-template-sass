@@ -1,3 +1,25 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+footer {
+  background-color: $color-background;
+}
+.footer-menu {
+  text-align: center;
+  margin: 1rem;
+}
+.footer-menu a {
+  @include font($size: 1.4rem, $height: 1.7rem);
+  color: $color-footer-menu;
+  padding: 0 0.5rem;
+}
+.footer-menu a:hover {
+  color: $color-footer-menu-hover;
+}
+
+.footer_address {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.footer-adress a {
+  //display: flex;
+  //flex-wrap: nowrap;
+}
