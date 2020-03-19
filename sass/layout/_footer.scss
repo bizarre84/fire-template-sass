@@ -14,12 +14,82 @@ footer {
   color: $color-footer-menu-hover;
 }
 
-.footer_address {
+.footer-address {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  align-content: center;
+  justify-content: space-between;
 }
-.footer-adress a {
-  //display: flex;
-  //flex-wrap: nowrap;
+.footer-address-wrapper {
+  margin: auto;
+  @extend %font-diplayProBlack;
+  @include font($size: 1.4rem);
+  text-align: center;
+}
+.footer-address-wrapper p {
+  color: $color-additional;
+}
+.footer-address-wrapper a {
+  color: $color-footer-address;
+}
+.footer-address-wrapper a:hover {
+  color: $color-footer-address-hover;
+}
+.footer-mail {
+  padding: 1rem;
+  text-align: center;
+}
+.footer-mail a {
+  color: $color-additional;
+}
+.footer-mail a:hover {
+  color: $color-additional-hover;
+}
+.footer-links a {
+  display: block;
+  text-align: center;
+  color: $color-additional;
+}
+.footer-links a:hover {
+  color: $color-additional-hover;
+}
+.footer_forms {
+  text-align: center;
+}
+.footer_forms p {
+  @extend %font-diplayProBlack;
+  @include font($size: 1.8rem);
+  color: $color-white;
+}
+.footer_forms input, .footer_forms textarea {
+  @include font($size: 1.4rem);
+  width: 93%;
+  background-color: $color-gray;
+  border: none;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+}
+.footer_forms input[type="button"] {
+  background-color: $color-additional;
+  color: $color-white;
+}
+.footer_forms input[type="button"]:hover {
+  color: $color-gray;
+}
+.footer-socials {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-socials img {
+  width: 4rem;
+  height: 4rem;
+}
+.copyright {
+  padding: 0 1rem;
+  text-align: center;
+}
+.copyright a {
+  color: $color-gray;
+  @include font($size: 1.4rem);
 }

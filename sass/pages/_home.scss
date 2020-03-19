@@ -117,7 +117,10 @@
 .all-news a:hover {
   color: $color-additional-hover;
 }
-.content h1 {
+.main-content {
+  padding: 0 1rem;
+}
+.main-content h1 {
   text-align: center;
 }
 .main-brands {
