@@ -1,13 +1,9 @@
 document.addEventListener('DOMContentLoaded', function(){
   /*add chevron*/
   let chevron = document.querySelectorAll('a.root-item');
-  let count = 0;
   chevron.forEach(element => {
-    count++;
     element.insertAdjacentHTML("beforeend", '<i class="fas fa-chevron-down"></i>');
-    console.log(element);
   }); 
-  console.log('Найдено - ' + count);
   /* /add chevron */
 
   /* mobile show and hide second block menu */
