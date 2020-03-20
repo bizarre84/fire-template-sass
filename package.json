@@ -19,5 +19,8 @@
   "homepage": "https://github.com/bizarre84/fire-template-sass#readme",
   "devDependencies": {
     "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
   }
 }

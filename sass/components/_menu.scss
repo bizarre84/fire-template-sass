@@ -1,7 +1,41 @@
+/*base*/
+.container--is--not--visible {
+  display: none;
+}
+ul#vertical-multilevel-menu, #vertical-multilevel-menu ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+	text-transform: uppercase;
+}
+/*Submenu box*/
+#vertical-multilevel-menu li ul {
+  border:1px solid #C1C1C1;
+}
+/* Submenu Items */
+#vertical-multilevel-menu li a {
+  color: $color-menu-link2;
+  background-color: $color-menu-link2-background;
+  border-bottom:1px solid #C1C1C1;
+  padding: 1rem 0;
+}
+/*Items selected*/
+#vertical-multilevel-menu li a.item-selected
+{
+  color: $color-additional;
+  background-color: #D6D6D6;
+}
+/*Items Hover */
+#vertical-multilevel-menu li a:hover
+{
+  color: #ff501a;
+  background-color: #D6D6D6;
+}
+
 #left-menu-container {
   display: none;
   background-color: $color-background;
-  padding: 0.5rem 1rem;
+  //padding: 0.5rem 1rem;
 }
 #left-menu-container ul {
   list-style-type: none;
@@ -23,31 +57,48 @@
   flex-direction: column;
 }
 
-#vertical-multilevel-menu a {
+#vertical-multilevel-menu a.root-item {
   position: relative;
   display: inline-flex;
   padding: 20px;
   text-decoration: none;
-  color: $color-white;
+  color: $color-menu-link1;
+  background-color: $color-menu-link1-background;
   flex: 1;
   justify-content: center;
 }
-#vertical-multilevel-menu a:hover {
-  color: $color-background;
+#vertical-multilevel-menu a.root-item:hover {
+  color: $color-menu-link1-hover;
+  background-color: $color-menu-link1-hover-background;
 }
 
-#vertical-multilevel-menu a > .fa {
+#vertical-multilevel-menu a > .fas {
   margin-left: 8px;
 }
 
 #vertical-multilevel-menu li:hover {
-  background-color: $color-white;
+ // background-color: $color-additional;
+ // color: $color-background;
 }
 
 #vertical-multilevel-menu li:hover .root-item {
   display: flex;
+  flex-direction: column;
 }
 
 #vertical-multilevel-menu ul{
-  padding: 0 0 0 2rem;
+  //padding: 0 2rem;
+}
+
+#vertical-multilevel-menu ul li {
+  //background-color: $color-gray ;
+  //color: $color-background;
+  //margin: 0.5rem 0;
+}
+//second level
+ul.root-item {
+  background-color: $color-ul2-background;
+}
+ul.root-item>li>a {
+  //color: 
 }

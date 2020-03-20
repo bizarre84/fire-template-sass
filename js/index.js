@@ -1,19 +1,29 @@
 document.addEventListener('DOMContentLoaded', function(){
-  /*add chevron*/
-  let chevron = document.querySelectorAll('a.root-item');
+  //add chevron
+  let chevron = document.querySelectorAll('#vertical-multilevel-menu > li');
+  let count = 0;
   chevron.forEach(element => {
-    element.insertAdjacentHTML("beforeend", '<i class="fas fa-chevron-down"></i>');
+    let sub = element.querySelector('ul');
+    if(sub !== null){
+      let linkForSubMenu = element.querySelector('a.root-item');
+      linkForSubMenu.insertAdjacentHTML("beforeend", '<i class="fas fa-chevron-down"></i>');
+      let subMenuBox = element.querySelector('ul');
+      subMenuBox.setAttribute("class", "root-item container--is--not--visible");
+      //show and hide subMenuBox
+      linkForSubMenu.addEventListener('click', function(e){
+        e.preventDefault();
+        let classElement = subMenuBox.getAttribute("class");
+        if(classElement=="root-item container--is--not--visible") {
+          subMenuBox.setAttribute("class", "root-item");
+        }
+        else {
+          subMenuBox.setAttribute("class", "root-item container--is--not--visible");
+        }
+      });
+    }
   }); 
-  /* /add chevron */
-
-  /* mobile show and hide second block menu */
-  let secondBlock = document.querySelectorAll('#vertical-multilevel-menu li');
-  secondBlock.onclick = function(e){
-    //e.preventDefault();
-    this.classList.toogle("is-selected");
-  }
-  /* /mobile show and hide second block menu */
 });
+
 
 function openMenu(){
   let a = document.getElementsByClassName('icon')[0];
