@@ -18,6 +18,13 @@ header {
 
 .language a {
   padding: 1.4rem 0 1.4rem 3.5rem;
+  color: $color-white;
+  @include media-tablet {
+    padding: 0.7rem 0 1.4rem 3.5rem;
+  }
+}
+.language a:hover {
+  color: $color-additional;
 }
 .lang_en {
   background: url("../img/header/lang_en.png") no-repeat;
@@ -31,12 +38,55 @@ header {
   
 }
 
-.header-main div {
+.header-main .language {
   padding: 0 0.5rem;
+  @include media-tablet {
+    padding: 0 3.5rem 0 0.5rem;
+  }
+}
+.phone {
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 30rem;
+  }
+}
+.phone-text {
+  display: none;
+  
+  @include media-tablet {
+    display: inline-block;
+    flex-grow: 2;
+    text-align: center;
+    margin: 0 0 1rem;
+    color: $color-white;
+  }
 }
 .phone a {
   padding: 0 0.5rem;
   color: $color-white;
+  
+  @include media-tablet {
+    flex-grow: 1;
+  }
+}
+
+.phone a:hover {
+  color: $color-additional;
+}
+
+.phone-text-link, .mail-text-link, .header-address, .slogan, .language-text {
+  display: none;
+}
+
+.language-text, .phone-text-link, .mail-text-link {
+  @include media-tablet {
+    display: inline;
+  }
+}
+
+.phone-text-link, .mail-text-link {
+  margin-left: 1rem;
 }
 
 .bars a {
@@ -45,8 +95,4 @@ header {
 
 .bars a.activ-link {
   color: $color-additional;
-}
-
-.phone-text, .phone-text-link, .mail-text-link, .header-address, .slogan, .language-text {
-  display: none;
 }
