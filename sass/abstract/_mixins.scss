@@ -6,17 +6,17 @@
 }
 
 @mixin media-mobilesmall {
-  @media (max-width: $mobile-small-width) { @content; }
+  @media (min-width: $mobile-small-width) { @content; }
 }
 
 @mixin media-mobile {
-  @media (max-width: $mobile-big-width) { @content; }
+  @media (min-width: $mobile-big-width) { @content; }
 }
 
 @mixin media-tablet {
-  @media (max-width: $tablet-width) { @content; }
+  @media (min-width: $tablet-width) { @content; }
 }
 
 @mixin media-laptop {
-  @media (max-width: $content-width) { @content; }
+  @media (min-width: $laptop-width) { @content; }
 }

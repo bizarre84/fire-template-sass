@@ -451,9 +451,15 @@ h1 {
 }
 
 .wrapper {
-  max-width: 320px;
+  min-width: 320px;
   margin: 0 auto;
 }
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+
 header {
   background-color: #004a80;
 }
