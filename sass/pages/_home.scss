@@ -1,6 +1,9 @@
 .img-menu {
   display: flex;
   flex-direction: column;
+  @include media-tablet {
+    flex-direction: row;
+  }
 }
 .img-menu a {
   display: block;
@@ -15,10 +18,14 @@
   border-width: 0.1rem;
   border-color: $color-img-menu-hover;
 }
-.fire, .water, .remont {
+.img-menu-item {
   height: 25rem;
   background-repeat: no-repeat;
   background-size: cover;
+  @include media-tablet {
+    display: flex;
+    width: 33.34%;
+  }
 }
 
 .fire {
@@ -133,6 +140,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @include media-tablet {
+    width: 33%;
+  }
 }
 .brand a {
   text-align: center;

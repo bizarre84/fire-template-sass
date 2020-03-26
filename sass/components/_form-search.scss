@@ -1,5 +1,9 @@
 .search {
   background-color: $color-additional;
+  border: 0.1rem darken($color: $color-additional, $amount: 15%) solid;
+}
+.search:hover, .search:active {
+  border: 0.1rem invert($color: $color-additional) solid;
 }
 .search form {
   display: flex;
