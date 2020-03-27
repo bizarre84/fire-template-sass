@@ -937,6 +937,11 @@ ul.root-item {
 .remont .note {
   background-color: #ff501a;
 }
+@media (min-width: 768px) {
+  .remont .note {
+    bottom: 0;
+  }
+}
 
 .remont .note:before {
   content: "";
@@ -949,6 +954,13 @@ ul.root-item {
   position: absolute;
   bottom: -1.2rem;
   right: 1.5rem;
+}
+@media (min-width: 768px) {
+  .remont .note:before {
+    bottom: 8rem;
+    border: 1.2rem solid transparent;
+    border-bottom: 1.2rem solid #ff501a;
+  }
 }
 
 .water .note {
