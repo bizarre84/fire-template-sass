@@ -65,9 +65,9 @@
 }
 .remont .note {
   background-color: $color-additional;
-  @include media-tablet {
+  /* @include media-tablet {
     bottom: 0;
-  }
+  } */
 }
 .remont .note:before {
   content: "";
@@ -80,11 +80,11 @@
   position: absolute;
   bottom: -1.2rem;
   right: 1.5rem;
-  @include media-tablet {
+  /* @include media-tablet {
     bottom: 8rem;
     border: 1.2rem solid transparent;
     border-bottom: 1.2rem solid $color-additional; 
-  }
+  } */
 }
 .water .note {
   background-color: $color-primary;
