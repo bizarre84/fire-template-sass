@@ -456,16 +456,51 @@ h1 {
 }
 @media (min-width: 768px) {
   .wrapper {
-    max-width: 768px;
+    min-width: 768px;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  .wrapper {
+    max-width: 992px;
   }
 }
 
 header {
-  background-color: #004a80;
+  background-color: #ffffff;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left, from(#004a80), to(#ffffff));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+  /* IE10 */
+  background-image: -o-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr="#004a80", EndColorStr="#ffffff");
 }
 
 .header {
+  background-color: #004a80;
+}
+
+.header-logo {
   padding: 0.5rem 0;
+}
+
+.header-main {
+  padding: 0.5rem 0;
+}
+
+.header-address {
+  padding: 0.5rem 0;
+}
+@media (min-width: 992px) {
+  .header-address {
+    padding: 0;
+  }
 }
 
 .layout-3-column {
@@ -477,6 +512,11 @@ header {
 .logo {
   width: 10rem;
   display: inline-block;
+}
+@media (min-width: 992px) {
+  .logo {
+    width: 18rem;
+  }
 }
 
 .language a {
@@ -503,6 +543,11 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 992px) {
+  .header-main {
+    flex-direction: column;
+  }
+}
 
 .header-main .language {
   padding: 0 0.5rem;
@@ -518,6 +563,11 @@ header {
     display: flex;
     flex-wrap: wrap;
     max-width: 30rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  .phone {
+    flex-direction: column;
   }
 }
 
@@ -548,7 +598,26 @@ header {
   color: #ff501a;
 }
 
-.phone-text-link, .mail-text-link, .header-address, .slogan, .language-text {
+.slogan {
+  display: none;
+}
+@media (min-width: 992px) {
+  .slogan {
+    display: block;
+  }
+}
+
+.header-address {
+  display: none;
+  background-color: #ffffff;
+}
+@media (min-width: 992px) {
+  .header-address {
+    display: flex;
+  }
+}
+
+.phone-text-link, .mail-text-link, .language-text {
   display: none;
 }
 
@@ -560,6 +629,12 @@ header {
 
 .phone-text-link, .mail-text-link {
   margin-left: 1rem;
+}
+
+@media (min-width: 992px) {
+  .bars {
+    display: none;
+  }
 }
 
 .bars a {
@@ -957,7 +1032,7 @@ ul.root-item {
 }
 @media (min-width: 768px) {
   .remont .note:before {
-    bottom: 8rem;
+    top: -2.4rem;
     border: 1.2rem solid transparent;
     border-bottom: 1.2rem solid #ff501a;
   }

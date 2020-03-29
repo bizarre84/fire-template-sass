@@ -1,8 +1,24 @@
 header {
+  @include linear-gradient-4point(left, $color-primary, $color-white);
+}
+
+.header {
   background-color: $color-primary;
 }
-.header {
+
+.header-logo {
   padding: 0.5rem 0;
+}
+
+.header-main {
+  padding: 0.5rem 0;
+}
+
+.header-address {
+  padding: 0.5rem 0;
+  @include media-laptop {
+    padding: 0;
+  }
 }
 
 .layout-3-column {
@@ -14,6 +30,9 @@ header {
 .logo {
   width: 10rem;
   display: inline-block;
+  @include media-laptop {
+    width: 18rem;
+  }
 }
 
 .language a {
@@ -35,7 +54,9 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
+  @include media-laptop {
+    flex-direction: column;
+  }
 }
 
 .header-main .language {
@@ -49,6 +70,9 @@ header {
     display: flex;
     flex-wrap: wrap;
     max-width: 30rem;
+    @include media-laptop {
+      flex-direction: column;
+    }
   }
 }
 .phone-text {
@@ -75,7 +99,22 @@ header {
   color: $color-additional;
 }
 
-.phone-text-link, .mail-text-link, .header-address, .slogan, .language-text {
+.slogan {
+  display: none;
+  @include media-laptop {
+    display: block;
+  }
+}
+
+.header-address {
+  display: none;
+  background-color: $color-white;
+  @include media-laptop {
+    display: flex;
+  }
+}
+
+.phone-text-link, .mail-text-link, .language-text {
   display: none;
 }
 
@@ -87,6 +126,12 @@ header {
 
 .phone-text-link, .mail-text-link {
   margin-left: 1rem;
+}
+
+.bars {
+  @include media-laptop {
+    display: none;
+  }
 }
 
 .bars a {

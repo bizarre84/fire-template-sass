@@ -2,6 +2,9 @@
   min-width: $content-width;
   margin: 0 auto;
   @include media-tablet {
-    max-width: $tablet-width;
+    min-width: $tablet-width;
+    @include media-laptop {
+      max-width: $laptop-width;
+    }
   }
 }

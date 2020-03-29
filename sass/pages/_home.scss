@@ -81,7 +81,7 @@
   bottom: -1.2rem;
   right: 1.5rem;
   @include media-tablet {
-    bottom: 8rem;
+    top: -2.4rem;
     border: 1.2rem solid transparent;
     border-bottom: 1.2rem solid $color-additional; 
   }

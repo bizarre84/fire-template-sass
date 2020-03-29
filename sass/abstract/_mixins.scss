@@ -5,11 +5,18 @@
   font-style: $style;
 }
 
-@mixin media-mobilesmall {
-  @media (min-width: $mobile-small-width) { @content; }
+@mixin linear-gradient-4point($direction, $fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, $direction, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient($direction, $fromColor 0%, $fromColor 50%, $toColor 50%, $toColor 50%); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient($direction, $fromColor 0%, $fromColor 50%, $toColor 50%, $toColor 50%); /* FF3.6 */
+  background-image:     -ms-linear-gradient($direction, $fromColor 0%, $fromColor 50%, $toColor 50%, $toColor 50%); /* IE10 */
+  background-image:      -o-linear-gradient($direction, $fromColor 0%, $fromColor 50%, $toColor 50%, $toColor 50%); /* Opera 11.10+ */
+  background-image:         linear-gradient($direction, $fromColor 0%, $fromColor 50%, $toColor 50%, $toColor 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
-@mixin media-mobile {
+@mixin media-mobile-big {
   @media (min-width: $mobile-big-width) { @content; }
 }
 
@@ -19,4 +26,8 @@
 
 @mixin media-laptop {
   @media (min-width: $laptop-width) { @content; }
+}
+
+@mixin media-desktop {
+  @media (min-width: $desktop-width) { @content; }
 }
