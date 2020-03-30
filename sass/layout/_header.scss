@@ -1,9 +1,15 @@
 header {
-  @include linear-gradient-4point(left, $color-primary, $color-white);
+  background-color: $color-primary;
+  @include media-laptop {
+    @include linear-gradient-4point(left, $color-primary, $color-white);
+  }
+  
 }
 
 .header {
-  background-color: $color-primary;
+  @include media-laptop {
+    background-color: $color-primary;
+  }
 }
 
 .header-logo {
@@ -25,6 +31,9 @@ header {
   display: flex;
   margin: 0 1rem;
   justify-content: space-between;
+  @include media-laptop {
+    margin: 0 0 0 1rem;
+  }
 }
 
 .logo {
@@ -56,6 +65,7 @@ header {
   align-items: center;
   @include media-laptop {
     flex-direction: column;
+    width: 90%;
   }
 }
 
@@ -114,11 +124,42 @@ header {
   }
 }
 
-.phone-text-link, .mail-text-link, .language-text {
-  display: none;
+.address {
+  @include media-laptop {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+  }
 }
 
-.language-text, .phone-text-link, .mail-text-link {
+.header-address-link {
+  @extend %font-diplayProBlack;
+  @include media-laptop {
+    width: 40%;
+    @include font($size: 1.4rem);
+    margin: 0 1.5rem;
+    padding-left: 1rem;
+    border-left: 0.3rem solid $color-white;
+  }
+}
+
+.header-address-link:hover {
+  border-left: 0.3rem solid $color-additional;
+}
+
+.header-address-link p {
+  padding: 0;
+  margin-bottom: 0.6rem;
+  color: $color-primary;
+}
+
+.header-address-link span {
+  @include font ($size: 1.5rem);
+  color: $color-text;
+}
+
+.phone-text-link, .mail-text-link, .language-text {
+  display: none;
   @include media-tablet {
     display: inline;
   }

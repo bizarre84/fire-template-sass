@@ -8,7 +8,7 @@
   font-family: "PFDinDisplayProBold", Verdana, sans-serif;
 }
 
-.main-news a, .note, .footer_forms p, .footer-address-wrapper, h1 {
+.main-news a, .note, .footer_forms p, .footer-address-wrapper, .header-address-link, h1 {
   font-family: "PFDinDisplayProBlack", Verdana, sans-serif;
 }
 
@@ -466,24 +466,31 @@ h1 {
 }
 
 header {
-  background-color: #ffffff;
-  /* Fallback Color */
-  background-image: -webkit-gradient(linear, left, from(#004a80), to(#ffffff));
-  /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
-  /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
-  /* FF3.6 */
-  background-image: -ms-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
-  /* IE10 */
-  background-image: -o-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
-  /* Opera 11.10+ */
-  background-image: linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr="#004a80", EndColorStr="#ffffff");
+  background-color: #004a80;
+}
+@media (min-width: 992px) {
+  header {
+    background-color: #ffffff;
+    /* Fallback Color */
+    background-image: -webkit-gradient(linear, left, from(#004a80), to(#ffffff));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+    /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image: -moz-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+    /* FF3.6 */
+    background-image: -ms-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+    /* IE10 */
+    background-image: -o-linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+    /* Opera 11.10+ */
+    background-image: linear-gradient(left, #004a80 0%, #004a80 50%, #ffffff 50%, #ffffff 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr="#004a80", EndColorStr="#ffffff");
+  }
 }
 
-.header {
-  background-color: #004a80;
+@media (min-width: 992px) {
+  .header {
+    background-color: #004a80;
+  }
 }
 
 .header-logo {
@@ -507,6 +514,11 @@ header {
   display: flex;
   margin: 0 1rem;
   justify-content: space-between;
+}
+@media (min-width: 992px) {
+  .layout-3-column {
+    margin: 0 0 0 1rem;
+  }
 }
 
 .logo {
@@ -546,6 +558,7 @@ header {
 @media (min-width: 992px) {
   .header-main {
     flex-direction: column;
+    width: 90%;
   }
 }
 
@@ -617,12 +630,50 @@ header {
   }
 }
 
+@media (min-width: 992px) {
+  .address {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-address-link {
+    width: 40%;
+    font-size: 1.4rem;
+    line-height: 1.61rem;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 1.5rem;
+    padding-left: 1rem;
+    border-left: 0.3rem solid #ffffff;
+  }
+}
+
+.header-address-link:hover {
+  border-left: 0.3rem solid #ff501a;
+}
+
+.header-address-link p {
+  padding: 0;
+  margin-bottom: 0.6rem;
+  color: #004a80;
+}
+
+.header-address-link span {
+  font-size: 1.5rem;
+  line-height: 1.725rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #464646;
+}
+
 .phone-text-link, .mail-text-link, .language-text {
   display: none;
 }
-
 @media (min-width: 768px) {
-  .language-text, .phone-text-link, .mail-text-link {
+  .phone-text-link, .mail-text-link, .language-text {
     display: inline;
   }
 }
