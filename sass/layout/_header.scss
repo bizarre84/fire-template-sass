@@ -65,6 +65,7 @@ header {
   align-items: center;
   @include media-laptop {
     flex-direction: column;
+    align-items: flex-end;
     width: 90%;
   }
 }
@@ -74,20 +75,24 @@ header {
   @include media-tablet {
     padding: 0 3.5rem 0 0.5rem;
   }
+  @include media-laptop {
+    padding: 0 2.5rem 0 0.5rem;
+  }
 }
 .phone {
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
     max-width: 30rem;
-    @include media-laptop {
-      flex-direction: column;
-    }
+  }
+  @include media-laptop {
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
-.phone-text {
+.phone__text {
   display: none;
-  
+  @extend %font-displayProItalic;
   @include media-tablet {
     display: inline-block;
     flex-grow: 2;
@@ -95,18 +100,26 @@ header {
     margin: 0 0 1rem;
     color: $color-white;
   }
+  @include media-laptop {
+    padding-right: 2.5rem;
+  }
 }
-.phone a {
+.phone__href {
   padding: 0 0.5rem;
   color: $color-white;
-  
   @include media-tablet {
     flex-grow: 1;
   }
+  @include media-laptop {
+    padding: 0 2.5rem 0 0;
+  }
 }
 
-.phone a:hover {
+.phone__href:hover {
   color: $color-additional;
+}
+.phone-text-link {
+  
 }
 
 .slogan {
