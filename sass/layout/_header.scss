@@ -66,7 +66,7 @@ header {
   @include media-laptop {
     flex-direction: column;
     align-items: flex-end;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -88,6 +88,9 @@ header {
   @include media-laptop {
     flex-direction: column;
     align-items: flex-end;
+    margin-top: 3rem;
+    padding: 1rem 2.5rem 1rem 2rem;
+    background-color: #013a63;
   }
 }
 .phone__text {
@@ -101,7 +104,7 @@ header {
     color: $color-white;
   }
   @include media-laptop {
-    padding-right: 2.5rem;
+    //padding-right: 2.5rem;
   }
 }
 .phone__href {
@@ -111,7 +114,7 @@ header {
     flex-grow: 1;
   }
   @include media-laptop {
-    padding: 0 2.5rem 0 0;
+    padding: 0;
   }
 }
 
@@ -119,14 +122,35 @@ header {
   color: $color-additional;
 }
 .phone-text-link {
-  
+  @include media-laptop {
+    @include font-textProBold;
+    @include font($size:2.3rem,$height:2.8rem);
+  }
+}
+
+.phone__icon {
+  @include media-laptop {
+    display: none;
+  }
 }
 
 .slogan {
   display: none;
   @include media-laptop {
+    position: relative;
     display: block;
+    padding-right: 2rem;
+    @include font-textProBold;
+    @include font($size:2.2rem);
+    color: $color-white;
   }
+}
+.slogan-quotes {
+  position: absolute;
+  top:4rem;
+  right:28rem;
+  @include font($size:8rem, $height:2.53rem);
+  @extend %font-prim;
 }
 
 .header-address {

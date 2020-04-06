@@ -6,8 +6,12 @@
   font-family: 'PFDinTextProRegular', Verdana, sans-serif;
 }
 
-%font-textProBold {
+@mixin font-textProBold {
   font-family: 'PFDinDisplayProBold', Verdana, sans-serif;
+}
+
+%font-textProBold {
+  @include font-textProBold;
 }
 
 %font-diplayProBlack {
@@ -17,6 +21,11 @@
 %font-diplayProMedium {
   font-family: 'PFDinDisplayProMedium', Verdana, sans-serif;
 }
-%font-displayProItalic {
+
+@mixin font-displayProItalic {
   font-family: 'PFDinDisplayProItalic', Verdana, sans-serif;
+}
+
+%font-displayProItalic {
+  @include font-displayProItalic;
 }
