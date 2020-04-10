@@ -1,3 +1,10 @@
+.main-wrapper{
+  display: flex;
+  flex-direction: column;
+  @include media-laptop{
+    flex-direction: row;
+  }
+}
 .img-menu {
   display: flex;
   flex-direction: column;

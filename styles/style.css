@@ -985,7 +985,6 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul {
   display: none;
   background-color: #404042;
 }
-
 #left-menu-container ul {
   list-style-type: none;
 }
@@ -1033,6 +1032,16 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul {
 
 ul.root-item {
   background-color: #8c8c8c;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .main-wrapper {
+    flex-direction: row;
+  }
 }
 
 .img-menu {
