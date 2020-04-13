@@ -71,7 +71,7 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul{
 /*Items Hover */
 #vertical-multilevel-menu li a:hover
 {
-  color: #ff501a;
+  color: $color-additional;
   background-color: #D6D6D6;
 }
 
@@ -105,16 +105,38 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul{
 #vertical-multilevel-menu a.root-item {
   position: relative;
   display: inline-flex;
-  padding: 20px;
+  padding: 2rem;
   text-decoration: none;
   color: $color-menu-link1;
   background-color: $color-menu-link1-background;
   flex: 1;
   justify-content: center;
+  @include media-laptop {
+    @include font-textProBold;
+    @include font ($size:1.4rem, $height:1.6rem);
+    color: $color-ul2-background;
+    border: none;
+    padding: 1rem 3rem;
+  }
 }
 #vertical-multilevel-menu a.root-item:hover {
   color: $color-menu-link1-hover;
   background-color: $color-menu-link1-hover-background;
+  @include media-laptop {
+    color: $color-additional;
+  }
+}
+
+/*Root menu Items hover*/
+#vertical-multilevel-menu a.root-item:hover, #vertical-multilevel-menu a.root-item-selected:hover {
+  background: $color-white;
+  color: #5e5e5e;
+}
+/*Root menu Items Selected*/
+#vertical-multilevel-menu a.root-item-selected
+{
+  background: $color-white;
+  color: $color-additional;
 }
 
 #vertical-multilevel-menu a > .fas {
