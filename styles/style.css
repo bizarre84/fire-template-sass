@@ -991,11 +991,11 @@ footer {
 @media (min-width: 992px) {
   .left_menu--shadow {
     position: absolute;
-    right: 24rem;
+    right: 100%;
     top: 0;
     height: 100%;
     background-color: #404042;
-    width: 100%;
+    width: 300rem;
   }
 }
 
@@ -1128,6 +1128,7 @@ ul.root-item {
 .img-menu {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 @media (min-width: 768px) {
   .img-menu {
@@ -1159,6 +1160,17 @@ ul.root-item {
   .img-menu-item {
     display: flex;
     width: 33.34%;
+  }
+}
+
+@media (min-width: 992px) {
+  .img-menu--shadow {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    background-color: #404042;
+    width: 300rem;
   }
 }
 

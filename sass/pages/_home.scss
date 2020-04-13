@@ -8,6 +8,7 @@
 .img-menu {
   display: flex;
   flex-direction: column;
+  position: relative;
   @include media-tablet {
     flex-direction: row;
   }
@@ -32,6 +33,17 @@
   @include media-tablet {
     display: flex;
     width: 33.34%;
+  }
+}
+
+.img-menu--shadow{
+  @include media-laptop {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    background-color: $color-background;
+    width: 300rem;
   }
 }
 
