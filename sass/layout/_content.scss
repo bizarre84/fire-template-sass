@@ -1,6 +1,10 @@
 .content {
-  display: flex;
-  flex-wrap: wrap;
+  @include media-laptop{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: $laptop-width - 240px;
+  }
 }
 .content .wrapper {
   padding: 0;

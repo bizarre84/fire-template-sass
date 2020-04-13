@@ -373,10 +373,19 @@ html {
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-*,
+/*
+ *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+*/
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /**
@@ -748,17 +757,37 @@ header {
   color: #ff501a;
 }
 
+@media (min-width: 992px) {
+  .left-sidebar {
+    width: 24rem;
+  }
+}
+
 .news {
   display: none;
+}
+@media (min-width: 992px) {
+  .news {
+    display: inline-block;
+  }
 }
 
 .summary-production {
   display: none;
 }
+@media (min-width: 992px) {
+  .summary-production {
+    display: inline-block;
+  }
+}
 
-.content {
-  display: flex;
-  flex-wrap: wrap;
+@media (min-width: 992px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 752px;
+  }
 }
 
 .content .wrapper {
@@ -934,9 +963,7 @@ footer {
   border: none;
   margin-left: 1rem;
   color: #ffffff;
-  width: 95%;
 }
-
 .search input[type=submit] {
   background: url(../img/header/search.png) no-repeat 50% 50%;
   border: none;
@@ -945,6 +972,33 @@ footer {
 }
 
 /*base*/
+/*
+.left_menu::before {
+  @include media-laptop {
+    content: '';
+    background-color: $color-gray;
+    height: 100%;
+    width: auto;
+  }
+}
+*/
+@media (min-width: 992px) {
+  .left_menu {
+    position: relative;
+  }
+}
+
+@media (min-width: 992px) {
+  .left_menu--shadow {
+    position: absolute;
+    right: 24rem;
+    top: 0;
+    height: 100%;
+    background-color: #404042;
+    width: 100%;
+  }
+}
+
 .container--is--not--visible {
   display: none;
 }
@@ -960,6 +1014,17 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul {
 #vertical-multilevel-menu li ul {
   border: 1px solid #C1C1C1;
 }
+@media (min-width: 992px) {
+  #vertical-multilevel-menu li ul {
+    position: absolute;
+    top: auto;
+    display: none;
+    z-index: 500;
+    height: auto;
+    border-bottom: none;
+    width: 20rem;
+  }
+}
 
 /* Submenu Items */
 #vertical-multilevel-menu li a {
@@ -967,6 +1032,16 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul {
   background-color: #f5f5f5;
   border-bottom: 1px solid #C1C1C1;
   padding: 1rem 0;
+}
+@media (min-width: 992px) {
+  #vertical-multilevel-menu li a {
+    display: block;
+    text-decoration: none;
+    color: #404042;
+    padding: 5px;
+    background: #F5F5F5;
+    border-bottom: 1px solid #C1C1C1;
+  }
 }
 
 /*Items selected*/
@@ -985,6 +1060,12 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul {
   display: none;
   background-color: #404042;
 }
+@media (min-width: 992px) {
+  #left-menu-container {
+    display: inline-block;
+  }
+}
+
 #left-menu-container ul {
   list-style-type: none;
 }

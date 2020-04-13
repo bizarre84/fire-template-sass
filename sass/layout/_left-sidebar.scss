@@ -1,8 +1,20 @@
 // include components/_menu.scss
 // include components/_form-search.scss
+.left-sidebar{
+  @include media-laptop {
+    width:24rem;
+  }
+}
+
 .news {
   display: none;
+  @include media-laptop{
+    display: inline-block;
+  }
 }
 .summary-production {
   display: none;
+  @include media-laptop{
+    display: inline-block;
+  }
 }

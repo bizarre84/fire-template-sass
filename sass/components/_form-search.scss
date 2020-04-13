@@ -16,7 +16,10 @@
   border: none;
   margin-left: 1rem;
   color: $color-white;
-  width: 95%;
+  //width: 95%;
+  @include media-laptop {
+    //width: 80%;
+  }
 }
 
 .search input[type="submit"] {
