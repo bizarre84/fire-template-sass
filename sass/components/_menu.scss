@@ -39,7 +39,8 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul{
   border:1px solid #C1C1C1;
   @include media-laptop {
     position:absolute;
-    top:auto;
+    top:2rem;
+    left: 80%;
     display:none;
     z-index:500;
     height:auto;
