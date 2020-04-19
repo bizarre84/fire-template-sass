@@ -1,0 +1,93 @@
+.contacts{
+  display: flex;
+  flex-direction: column;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  @include media-tablet{
+    flex-direction: row;
+  }
+}
+.contact-maps {
+  @include media-tablet{
+    flex:50%;
+    padding-right: 1rem;
+  }
+}
+.map-view {
+  width: 100%;
+  height: 35rem;
+}
+.mapsHeadText {
+  text-align: center;
+  color: $color-primary;
+  @include font($size: 1.2rem);
+  padding: 1rem;
+}
+.contact-information {
+  padding-top: 1rem;
+  color: $color-primary;
+  @include font-textProBold;
+  @include font($size:1.8rem);
+  @include media-tablet {
+    flex: 50%;
+    padding-left: 1rem;
+  }
+}
+.contact-address, .contact-phones {
+  display: flex;
+  text-transform: uppercase;
+  @include font($size:1.4rem);
+  padding: 2rem 0 2rem 2rem;
+}
+.address-marker {
+  padding-right: 2rem;
+  @include font($size:2.5rem)
+}
+.phones-company {
+  padding-right: 2rem;
+  @include font($size:2.5rem)
+}
+.contact-phones i:not(:first-child){
+  padding-left: 0.5rem;
+}
+.contact-phones-href {
+  color: $color-primary;
+}
+.contact-phones-href:hover{
+  color: darken($color-primary, 10%);
+}
+.person {
+  display: flex;
+  padding-bottom: 2rem;
+}
+.person-info{
+  padding-left: 1rem;
+}
+.person-contact {
+  @include font($size:1.4rem);
+}
+.person-contact i {
+  padding-right: 0.5rem;
+}
+.person-contact-href {
+  @include font-displayProItalic;
+  color: $color-primary;
+}
+.person-contact-href:hover {
+  text-decoration: none;
+  color: lighten($color-primary, 30%);
+}
+.viber {
+  color: $color-viber;
+}
+.whatsapp {
+  color: $color-whatsapp;
+}
+.envelope {
+  color: $color-envelope;
+}
+.skype {
+  color: $color-skype;
+}

@@ -21,9 +21,12 @@
 @import "layout/footer";
 
 //5 components
+@import "components/breadcrumbs";
+@import "components/catalog";
 @import "components/img";
 @import "components/form-search";
 @import "components/menu";
 
 //6 pages
 @import "pages/home";
+@import "pages/contacts"

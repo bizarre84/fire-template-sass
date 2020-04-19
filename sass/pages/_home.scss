@@ -12,6 +12,9 @@
   @include media-tablet {
     flex-direction: row;
   }
+  @include media-laptop {
+    margin-left: -4rem;
+  }
 }
 .img-menu a {
   display: block;
@@ -119,6 +122,9 @@
     padding: 0;
     background-color: $color-white;
   }
+  @include media-laptop {
+    margin-left: -1rem;
+  }
 }
 .main-news .item {
   display: flex;
@@ -199,8 +205,9 @@
 }
 .brand a {
   text-align: center;
+  text-transform: uppercase;
   @extend %font-prim;
-  @include font($size: 1.4rem, $height: 1.7rem);
+  @include font($size: 1.4rem, $height: 1.7rem, $weight: 700);
   padding: 1.5rem;
 }
 .brand a:hover {

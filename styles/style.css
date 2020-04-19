@@ -8,7 +8,7 @@
   font-family: "PFDinDisplayProBold", Verdana, sans-serif;
 }
 
-.main-news a, .note, .footer_forms p, .footer-address-wrapper, .header-address-link, h1 {
+.main-news a, .note, .footer_forms p, .footer-address-wrapper, .header-address-link, h2, h1 {
   font-family: "PFDinDisplayProBlack", Verdana, sans-serif;
 }
 
@@ -457,10 +457,24 @@ body {
 
 h1 {
   color: #384071;
-  font-size: 2.2rem;
-  line-height: 2.53rem;
+  font-size: 3rem;
+  line-height: 3.45rem;
   font-weight: normal;
   font-style: normal;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #004a80;
+  font-size: 2.4rem;
+  line-height: 2.76rem;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+b, strong {
+  font-weight: 700;
 }
 
 .wrapper {
@@ -865,7 +879,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 752px;
+    padding-left: 4rem;
   }
 }
 
@@ -1014,6 +1028,233 @@ footer {
   font-style: normal;
 }
 
+.breadcrumbs {
+  display: block;
+  padding-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.breadcrumbs a {
+  color: #464646;
+  margin-right: 1rem;
+}
+
+.breadcrumbs a:hover {
+  color: #060606;
+}
+
+/* section block */
+.section_block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section_block .item {
+  flex: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section_block .item .img img {
+  display: inline-block;
+  margin-bottom: 2rem;
+  border: solid #ffffff 0.3rem;
+}
+
+.section_block .item .img img:hover {
+  border: solid #ff501a 0.3rem;
+}
+
+.section_block .item .name {
+  font-family: "PFDinDisplayProBlack", Verdana, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.61rem;
+  font-weight: normal;
+  font-style: normal;
+  border-left: solid #ff501a 0.3rem;
+  padding-left: 1.7rem;
+  color: #004a80;
+  text-transform: uppercase;
+}
+
+.section_block .item .name:hover {
+  text-decoration: none;
+  color: #ff501a;
+}
+
+.section_block .item:hover .name {
+  text-decoration: none;
+  color: #ff501a;
+}
+
+.section_block .item:hover .img img {
+  border: solid #ff501a 0.3rem;
+}
+
+/* catalog list */
+.fire_products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fire_products .item {
+  max-width: 25%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fire_products .item a {
+  display: block;
+  text-align: center;
+  border-bottom: solid #ff501a 0.3rem;
+  margin-bottom: 2rem;
+}
+
+.fire_products .item .name {
+  font-family: "PFDinDisplayProBold", Verdana, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 2rem;
+  width: 70%;
+}
+
+.fire_products .item .art {
+  text-align: center;
+  background-color: #004a80;
+  color: #ffffff;
+  font-family: "PFDinDisplayProMedium", Verdana, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.38rem;
+  font-weight: normal;
+  font-style: normal;
+  width: 70%;
+  padding: 0.5rem 0;
+  justify-content: flex-end;
+}
+
+/* catalog detail */
+.fire-product-detail {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fire-product-detail .top-description {
+  margin-bottom: 3rem;
+}
+
+.top-description__head {
+  display: flex;
+}
+
+.head-article {
+  flex: 50%;
+}
+
+.head-article span {
+  display: inline-block;
+  padding: 1rem;
+  background-color: #004a80;
+  color: #ffffff;
+  font-family: "PFDinDisplayProItalic", Verdana, sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.955rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.head-name {
+  flex: 50%;
+  font-family: "PFDinDisplayProBlack", Verdana, sans-serif;
+  font-size: 2.4rem;
+  line-height: 2.76rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #404042;
+}
+
+.top-description__body {
+  display: flex;
+}
+
+.body-img {
+  flex: 50%;
+}
+
+.body-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.body-description {
+  flex: 50%;
+}
+
+.button-buy {
+  display: flex;
+  justify-content: end;
+  margin: 3rem 0;
+}
+
+#a-buy {
+  display: inline-block;
+  background-color: #ff501a;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}
+
+.fire-product-detail .features {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.fire-product-detail .features .title {
+  font-family: "PFDinDisplayProBold", Verdana, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #004a80;
+  color: #ffffff;
+  padding: 1.5rem 4rem;
+}
+
+.fire-product-detail .features .properties {
+  display: flex;
+  flex-direction: row;
+  font-family: "PFDinDisplayProBold", Verdana, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #004a80;
+  background-color: none;
+}
+
+.fire-product-detail .features .properties:nth-child(2n+1) {
+  background-color: #e5edf2;
+}
+
+.fire-product-detail .features .properties .value {
+  flex: 50%;
+  padding: 1rem;
+}
+
+.fire-product-detail .features .properties .value_description {
+  flex: 50%;
+  padding: 1rem;
+}
+
 .responsive {
   width: 100%;
   height: auto;
@@ -1050,17 +1291,6 @@ footer {
   height: 4rem;
 }
 
-/*base*/
-/*
-.left_menu::before {
-  @include media-laptop {
-    content: '';
-    background-color: $color-gray;
-    height: 100%;
-    width: auto;
-  }
-}
-*/
 @media (min-width: 992px) {
   .left_menu {
     position: relative;
@@ -1115,6 +1345,10 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul {
 }
 @media (min-width: 992px) {
   #vertical-multilevel-menu li a {
+    font-size: 1.4rem;
+    line-height: 1.61rem;
+    font-weight: normal;
+    font-style: normal;
     display: block;
     text-decoration: none;
     color: #404042;
@@ -1244,6 +1478,11 @@ ul.root-item {
     flex-direction: row;
   }
 }
+@media (min-width: 992px) {
+  .img-menu {
+    margin-left: -4rem;
+  }
+}
 
 .img-menu a {
   display: block;
@@ -1369,6 +1608,11 @@ ul.root-item {
     background-color: #ffffff;
   }
 }
+@media (min-width: 992px) {
+  .main-news {
+    margin-left: -1rem;
+  }
+}
 
 .main-news .item {
   display: flex;
@@ -1470,15 +1714,153 @@ ul.root-item {
 
 .brand a {
   text-align: center;
+  text-transform: uppercase;
   font-size: 1.4rem;
   line-height: 1.7rem;
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   padding: 1.5rem;
 }
 
 .brand a:hover {
   color: #dd3400;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-maps {
+    flex: 50%;
+    padding-right: 1rem;
+  }
+}
+
+.map-view {
+  width: 100%;
+  height: 35rem;
+}
+
+.mapsHeadText {
+  text-align: center;
+  color: #004a80;
+  font-size: 1.2rem;
+  line-height: 1.38rem;
+  font-weight: normal;
+  font-style: normal;
+  padding: 1rem;
+}
+
+.contact-information {
+  padding-top: 1rem;
+  color: #004a80;
+  font-family: "PFDinDisplayProBold", Verdana, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.07rem;
+  font-weight: normal;
+  font-style: normal;
+}
+@media (min-width: 768px) {
+  .contact-information {
+    flex: 50%;
+    padding-left: 1rem;
+  }
+}
+
+.contact-address, .contact-phones {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 1.61rem;
+  font-weight: normal;
+  font-style: normal;
+  padding: 2rem 0 2rem 2rem;
+}
+
+.address-marker {
+  padding-right: 2rem;
+  font-size: 2.5rem;
+  line-height: 2.875rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.phones-company {
+  padding-right: 2rem;
+  font-size: 2.5rem;
+  line-height: 2.875rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.contact-phones i:not(:first-child) {
+  padding-left: 0.5rem;
+}
+
+.contact-phones-href {
+  color: #004a80;
+}
+
+.contact-phones-href:hover {
+  color: #002d4d;
+}
+
+.person {
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.person-info {
+  padding-left: 1rem;
+}
+
+.person-contact {
+  font-size: 1.4rem;
+  line-height: 1.61rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.person-contact i {
+  padding-right: 0.5rem;
+}
+
+.person-contact-href {
+  font-family: "PFDinDisplayProItalic", Verdana, sans-serif;
+  color: #004a80;
+}
+
+.person-contact-href:hover {
+  text-decoration: none;
+  color: #1a9eff;
+}
+
+.viber {
+  color: #8f5db7;
+}
+
+.whatsapp {
+  color: #128c7e;
+}
+
+.envelope {
+  color: #ca4c40;
+}
+
+.skype {
+  color: #03a9f4;
 }
 
 /*# sourceMappingURL=style.css.map */
