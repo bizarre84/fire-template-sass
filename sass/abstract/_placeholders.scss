@@ -14,12 +14,20 @@
   @include font-textProBold;
 }
 
-%font-diplayProBlack {
+@mixin font-diplayProBlack {
   font-family: 'PFDinDisplayProBlack', Verdana, sans-serif;
 }
 
-%font-diplayProMedium {
+%font-diplayProBlack {
+  @include font-diplayProBlack;
+}
+
+@mixin font-diplayProMedium {
   font-family: 'PFDinDisplayProMedium', Verdana, sans-serif;
+}
+
+%font-diplayProMedium {
+  @include font-diplayProMedium;
 }
 
 @mixin font-displayProItalic {

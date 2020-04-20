@@ -8,5 +8,17 @@ body {
 h1 {
   color: $color-h1;
   @extend %font-diplayProBlack;
-  @include font($size: 2.2rem);
+  @include font($size: 3rem);
+  text-transform: uppercase;
+}
+
+h2 {
+  color: $color-h2;
+  @extend %font-diplayProBlack;
+  @include font($size: 2.4rem);
+  text-transform: uppercase;
+}
+
+b, strong {
+  font-weight: 700;
 }

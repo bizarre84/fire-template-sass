@@ -1,14 +1,3 @@
-/*base*/
-/*
-.left_menu::before {
-  @include media-laptop {
-    content: '';
-    background-color: $color-gray;
-    height: 100%;
-    width: auto;
-  }
-}
-*/
 .left_menu {
   @include media-laptop {
     position: relative;
@@ -55,6 +44,7 @@ ul#vertical-multilevel-menu, #vertical-multilevel-menu ul{
   border-bottom:1px solid #C1C1C1;
   padding: 1rem 0;
   @include media-laptop {
+    @include font($size:1.4rem);
     display: block;
     text-decoration: none;
     color: #404042;

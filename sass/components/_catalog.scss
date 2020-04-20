@@ -1,0 +1,160 @@
+/* section block */
+.section_block {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section_block .item {
+  flex: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section_block .item .img img {
+  display: inline-block;
+  margin-bottom: 2rem;
+  border: solid $color-white 0.3rem;
+}
+
+.section_block .item .img img:hover {
+  border: solid $color-additional 0.3rem;
+}
+
+.section_block .item .name {
+  @include font-diplayProBlack;
+  @include font($size:1.4rem);
+  border-left: solid $color-additional 0.3rem;
+  padding-left: 1.7rem;
+  color: $color-primary;
+  text-transform: uppercase;
+}
+.section_block .item .name:hover {
+  text-decoration: none;
+  color: $color-additional;
+}
+
+.section_block .item:hover .name {
+  text-decoration: none;
+  color: $color-additional;
+}
+.section_block .item:hover .img img {
+  border: solid $color-additional 0.3rem;
+}
+
+/* catalog list */
+.fire_products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fire_products .item {
+  max-width: 25%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fire_products .item a {
+  display: block;
+  text-align: center;
+  border-bottom: solid $color-additional 0.3rem;
+  margin-bottom: 2rem;
+}
+.fire_products .item .name {
+  @include font-textProBold;
+  @include font($size:1.4rem, $height:1.6rem);
+  margin-bottom: 2rem;
+  width: 70%;
+}
+.fire_products .item .art {
+  text-align: center;
+  background-color: $color-primary;
+  color: $color-white;
+  @include font-diplayProMedium;
+  @include font($size:1.2rem);
+  width: 70%;
+  padding: 0.5rem 0;
+  justify-content: flex-end;
+}
+
+/* catalog detail */
+.fire-product-detail {
+  @include font($size: 1.4rem, $height: 1.7rem);
+}
+.fire-product-detail .top-description{
+  margin-bottom: 3rem;
+}
+.top-description__head {
+  display: flex;
+}
+.head-article {
+  flex: 50%;
+}
+.head-article span {
+  display: inline-block;
+  padding: 1rem;
+  background-color: $color-primary;
+  color: $color-white;
+  @include font-displayProItalic;
+  @include font($size:1.7rem);
+}
+.head-name {
+  flex: 50%;
+  @include font-diplayProBlack;
+  @include font($size:2.4rem);
+  color: $color-background;
+}
+.top-description__body {
+  display: flex;
+}
+.body-img {
+  flex: 50%;
+}
+.body-img img {
+  max-width: 100%;
+  height: auto;
+}
+.body-description {
+  flex: 50%;
+}
+.button-buy {
+  display: flex;
+  justify-content: end;
+  margin: 3rem 0;
+}
+#a-buy {
+  display: inline-block;
+  background-color: $color-additional;
+  color: $color-white;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}
+.fire-product-detail .features {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.fire-product-detail .features .title {
+  @include font-textProBold;
+  @include font($size:1.8rem, $height:2.4rem);
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 1.5rem 4rem;
+}
+.fire-product-detail .features .properties {
+  display: flex;
+  flex-direction: row;
+  @include font-textProBold;
+  @include font($size:1.2rem, $height:1.4rem);
+  color: $color-primary;
+  background-color: none;
+}
+.fire-product-detail .features .properties:nth-child(2n+1) {
+  background-color: #e5edf2;
+}
+.fire-product-detail .features .properties .value {
+  flex: 50%;
+  padding: 1rem;
+}
+.fire-product-detail .features .properties .value_description {
+  flex: 50%;
+  padding: 1rem;
+}
