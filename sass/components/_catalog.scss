@@ -76,6 +76,124 @@
 }
 
 /* catalog detail */
+.head-table {
+  width: 100%;
+}
+.head-table .row {
+  display: flex;
+}
+.head-table .col {
+  padding: 0.5rem 1rem;
+}
+.head-table .row_thead {
+  text-align: center;
+}
+.head-table .row_thead .col {
+  @include font-textProBold;
+  @include font($size:1.6rem);
+  background-color: $color-primary;
+  color: $color-white;
+}
+.head-table .row_tbody .col {
+  @include font-textProBold;
+  @include font($size:2rem);
+  background-color: $color-white;
+  color: $color-primary;
+}
+.col-code-order {
+  width: 50%;
+}
+.col-article-order {
+  width: 25%;
+  border-left: solid 0.1rem $color-white;
+  border-right: solid 0.1rem $color-white;
+}
+.col-usage {
+  width: 25%;
+}
+
+.advantages-list {
+  @include font-textProBold;
+  @include font($size:2rem);
+  color: $color-additional;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+/* svg */
+.href-arrow {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 1rem;
+}
+.svg-arrow {
+  width: 2rem;
+  height: 2rem;
+  }
+.href-arrow:hover #body-description-arrow {
+  -webkit-animation-name:change-background;
+          animation-name:change-background;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  }
+@-webkit-keyframes change-background {
+  0% { fill: #ffd8cc; }
+  10% { fill: #ff8a66; }
+  20% { fill: #ff6333; }
+  30% { fill: #ff3c00; }
+  40% { fill: #cc3000; }
+  50% { fill: #992400; }
+  60% { fill: #cc3000; }
+  70% { fill: #ff3c00; }
+  80% { fill: #ff6333; }
+  90% { fill: #ff8a66; }
+  100% { fill: #ffd8cc; }
+}
+@keyframes change-background {
+  0% { fill: #ffd8cc; }
+  10% { fill: #ff8a66; }
+  20% { fill: #ff6333; }
+  30% { fill: #ff3c00; }
+  40% { fill: #cc3000; }
+  50% { fill: #992400; }
+  60% { fill: #cc3000; }
+  70% { fill: #ff3c00; }
+  80% { fill: #ff6333; }
+  90% { fill: #ff8a66; }
+  100% { fill: #ffd8cc; }
+}
+.technical-specification {
+  margin-bottom: 3rem;
+}
+.related-products p {
+  color: $color-primary;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.related-products-href:hover a{
+  color: darken($color: #ff501a, $amount: 20%);
+}
+.top-description-href{
+  color: $color-primary;
+  margin-left: 0.5rem;
+}
+.href-arrow:hover .top-description-href {
+  color: $color-additional;
+}
+.top-description__body-left {
+  flex: 50%;
+}
+.top-description__body-right {
+  flex: 50%;
+}
+
 .fire-product-detail {
   @include font($size: 1.4rem, $height: 1.7rem);
 }
@@ -84,6 +202,7 @@
 }
 .top-description__head {
   display: flex;
+  margin-bottom: 2rem;
 }
 .head-article {
   flex: 50%;
@@ -118,6 +237,11 @@
 .button-buy {
   display: flex;
   justify-content: end;
+  margin: 3rem 0;
+}
+.button-buy-new {
+  display: flex;
+  justify-content: start;
   margin: 3rem 0;
 }
 #a-buy {
