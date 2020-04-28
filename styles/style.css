@@ -1654,6 +1654,12 @@ ul.root-item {
   background-color: #8c8c8c;
 }
 
+@media (min-width: 992px) {
+  .main {
+    overflow: hidden;
+  }
+}
+
 .main-wrapper {
   display: flex;
   flex-direction: column;
